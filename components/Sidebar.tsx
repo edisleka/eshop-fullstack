@@ -1,12 +1,12 @@
 import { FC } from 'react'
-import { motion } from 'motion/react'
-import Logo from '@/components/Logo'
-import { X } from 'lucide-react'
-import { headerData } from '@/constants'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import SocialMedia from './SocialMedia'
 import { useOutsideClick } from '@/hooks/useOutside'
+import { headerData } from '@/constants'
+import { motion } from 'motion/react'
+import { X } from 'lucide-react'
+import Logo from '@/components/Logo'
+import SocialMedia from '@/components/SocialMedia'
 
 interface SidebarProps {
   isOpen: boolean
@@ -19,7 +19,7 @@ const Sidebar: FC<SidebarProps> = ({ isOpen, onClose }) => {
 
   return (
     <div
-      className={`fixed inset-y-0 left-0 z-50 bg-darkColor/50 shadow-xl  cursor-auto w-full ${
+      className={`fixed inset-y-0 left-0 z-50 bg-darkColor/50 shadow-xl cursor-auto w-full ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
       }`}
     >
