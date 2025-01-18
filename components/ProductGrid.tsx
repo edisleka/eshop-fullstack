@@ -7,6 +7,8 @@ import { client } from '@/sanity/lib/client'
 import { Product } from '@/sanity.types'
 import ProductCard from './ProductCard'
 import NoProductsAvailable from './NoProductsAvailable'
+import { motion, AnimatePresence } from 'motion/react'
+import { Loader2 } from 'lucide-react'
 
 const ProductGrid = () => {
   const [selectedTab, setSelectedTab] = useState(productType[0]?.title || '')
@@ -36,8 +38,11 @@ const ProductGrid = () => {
     <div className='mt-10 flex flex-col items-center'>
       <HomeTabbar selectedTab={selectedTab} onTabSelect={setSelectedTab} />
       {loading ? (
-        <div>
-          <span>Product is loading...</span>
+        <div className='flex flex-col items-center justify-center py-10 min-h-80 space-y-4 text-center bg-gray-100 rounded-lg w-full mt-10'>
+          <div className='flex items-center space-x-2 text-blue-600'>
+            <Loader2 className='w-5 h-5 animate-spin' />
+            <span className='text-lg font-semibold'>Product is loading...</span>
+          </div>
         </div>
       ) : (
         <>
