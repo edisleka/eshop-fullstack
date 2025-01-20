@@ -5,14 +5,9 @@ import {
   TooltipTrigger,
 } from '@/components/ui/tooltip'
 import { cn } from '@/lib/utils'
+import { SocialMediaProps } from '@/PropTypes/SocialMediaProps'
 import { Facebook, Github, Linkedin, Slack, Youtube } from 'lucide-react'
 import Link from 'next/link'
-
-interface SocialMediaProps {
-  className?: string
-  iconClassName?: string
-  toolTipClassName?: string
-}
 
 const socialLinks = [
   {

@@ -7,7 +7,6 @@ import { client } from '@/sanity/lib/client'
 import { Product } from '@/sanity.types'
 import ProductCard from './ProductCard'
 import NoProductsAvailable from './NoProductsAvailable'
-import { motion, AnimatePresence } from 'motion/react'
 import { Loader2 } from 'lucide-react'
 
 const ProductGrid = () => {
@@ -47,7 +46,7 @@ const ProductGrid = () => {
       ) : (
         <>
           {products?.length ? (
-            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-10 bg-red-300 w-full'>
+            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-10 w-full'>
               {products?.map((product: Product) => (
                 <div key={product._id}>
                   <ProductCard product={product} />

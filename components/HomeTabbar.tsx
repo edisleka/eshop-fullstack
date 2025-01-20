@@ -1,12 +1,8 @@
 import { productType } from '@/constants'
+import { HomeTabbarProps } from '@/PropTypes/HomeTabbarProps'
 import { Repeat } from 'lucide-react'
 
-interface Props {
-  selectedTab: string
-  onTabSelect: (tab: string) => void
-}
-
-const HomeTabbar = ({ selectedTab, onTabSelect }: Props) => {
+const HomeTabbar = ({ selectedTab, onTabSelect }: HomeTabbarProps) => {
   return (
     <div className='flex items-center gap-1.5 text-sm font-semibold'>
       <div className='flex items-center gap-1.5'>

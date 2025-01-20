@@ -1,11 +1,7 @@
 import { cn } from '@/lib/utils'
+import { BasicProps } from '@/PropTypes/BasicProps'
 
-interface Props {
-  children: React.ReactNode
-  className?: string
-}
-
-const Title = ({ children, className }: Props) => {
+const Title = ({ children, className }: BasicProps) => {
   return (
     <div className={cn('text-2xl font-semibold', className)}>{children}</div>
   )

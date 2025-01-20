@@ -1,12 +1,8 @@
 import { cn } from '@/lib/utils'
+import { BasicProps } from '@/PropTypes/BasicProps'
 import Link from 'next/link'
 
-interface Props {
-  children: React.ReactNode
-  className?: string
-}
-
-const Logo = ({ children, className }: Props) => {
+const Logo = ({ children, className }: BasicProps) => {
   return (
     <Link href='/'>
       <h2

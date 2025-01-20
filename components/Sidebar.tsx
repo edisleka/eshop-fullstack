@@ -7,11 +7,7 @@ import { motion } from 'motion/react'
 import { X } from 'lucide-react'
 import Logo from '@/components/Logo'
 import SocialMedia from '@/components/SocialMedia'
-
-interface SidebarProps {
-  isOpen: boolean
-  onClose: () => void
-}
+import { SidebarProps } from '@/PropTypes/SidebarProps'
 
 const Sidebar: FC<SidebarProps> = ({ isOpen, onClose }) => {
   const pathname = usePathname()
