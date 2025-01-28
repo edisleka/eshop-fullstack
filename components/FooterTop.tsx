@@ -1,5 +1,5 @@
 import { FooterTopProps } from '@/PropTypes/FooterTopProps'
-import { MapPin, Phone } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock } from 'lucide-react'
 
 const data: FooterTopProps[] = [
   {
@@ -20,14 +20,14 @@ const data: FooterTopProps[] = [
     title: 'Working Hours',
     subtitle: 'Mon - Fri: 9:00 - 17:00',
     icon: (
-      <MapPin className='text-gray-600 group-hover:text-darkColor transition-colors' />
+      <Clock className='text-gray-600 group-hover:text-darkColor transition-colors' />
     ),
   },
   {
     title: 'Email Us',
     subtitle: 'shopz@gmail.com',
     icon: (
-      <MapPin className='text-gray-600 group-hover:text-darkColor transition-colors' />
+      <Mail className='text-gray-600 group-hover:text-darkColor transition-colors' />
     ),
   },
 ]
