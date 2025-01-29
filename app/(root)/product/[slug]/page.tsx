@@ -4,7 +4,13 @@ import ImageView from '@/components/ImageView'
 import PriceView from '@/components/PriceView'
 import ProductCharateristics from '@/components/ProductCharateristics'
 import { getProductBySlug } from '@/sanity/helpers/queries'
-import { Heart } from 'lucide-react'
+import {
+  BoxIcon,
+  FileQuestion,
+  Heart,
+  ListOrderedIcon,
+  Share2Icon,
+} from 'lucide-react'
 import { notFound } from 'next/navigation'
 
 const SinglePruductPage = async ({
@@ -49,6 +55,42 @@ const SinglePruductPage = async ({
           </button>
         </div>
         <ProductCharateristics product={product} />
+        <div className='flex flex-wrap gap-2.5 items-center justify-between border-b border-b-gray-200 py-5 -mt-2'>
+          <div className='flex items-center gap-2 text-sm text-black hover:text-red-600 hoverEffect'>
+            <BoxIcon className='w-5 h-5' />
+            <p>Compare color</p>
+          </div>
+          <div className='flex items-center gap-2 text-sm text-black hover:text-red-600 hoverEffect'>
+            <FileQuestion className='w-5 h-5' />
+            <p>Ask a question</p>
+          </div>
+          <div className='flex items-center gap-2 text-sm text-black hover:text-red-600 hoverEffect'>
+            <ListOrderedIcon className='w-5 h-5' />
+            <p>Delivery & Return</p>
+          </div>
+          <div className='flex items-center gap-2 text-sm text-black hover:text-red-600 hoverEffect'>
+            <Share2Icon className='w-5 h-5' />
+            <p>Share</p>
+          </div>
+        </div>
+        <div className='flex flex-wrap gap-5 items-center'>
+          <div className='border border-darkBlue/20 text-center p-3 hover:border-darkBlue rounded-md hoverEffect'>
+            <p className='text-base font-semibold text-darkColor'>
+              Free Shipping
+            </p>
+            <p className='text-sm text-gray-500'>
+              Free Shipping over order $120
+            </p>
+          </div>
+          <div className='border border-darkBlue/20 text-center p-3 hover:border-darkBlue rounded-md hoverEffect'>
+            <p className='text-base font-semibold text-darkColor'>
+              Flexible Payment
+            </p>
+            <p className='text-sm text-gray-500'>
+              Pay with Multiple Credit Cards
+            </p>
+          </div>
+        </div>
       </div>
     </Container>
   )
