@@ -9,7 +9,7 @@ const AddToCartButton = ({ product, className }: AddToCartButtonProps) => {
   const itemCount = 0
 
   return (
-    <div>
+    <div className='w-full'>
       {itemCount ? (
         <div className='w-full text-sm'>
           <div className='flex justify-between items-center'>
